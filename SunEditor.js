@@ -202,8 +202,9 @@ class SunEditor extends Component {
       this.editor.setDefaultStyle(this.props.setDefaultStyle);
     }
     if (prevProps.setContents !== this.props.setContents) {
-      !this.editor.core.hasFocus &&
-        this.editor.setContents(this.props.setContents);
+      if(!this.editor.core.hasFocus)
+        this.editor.core.focusEdge();
+      this.editor.setContents(this.props.setContents);
     }
     if (prevProps.appendContents !== this.props.appendContents) {
       this.editor.appendContents(this.props.appendContents);
