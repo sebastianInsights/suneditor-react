@@ -34,6 +34,34 @@ export default MyComponent;
 
 # Props
 
+## About Core
+
+**Note:** `suneditor-react` doesn't expose the core object in the callback functions such as `onScroll` etc. This is because it can be easily retrieved by attaching a ref to the Suneditor component.
+
+```javascript
+
+import React, { useRef, useEffect } from "react";
+import SunEditor from 'suneditor-react';
+import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+
+const MyComponent = props => {
+    const editorRef = useRef();
+    useEffect(() => {
+        // Get underlining core object here
+        // Notice that useEffect is been used because you have to make sure the editor is rendered.
+        console.log(editorRef.current.editor.core);
+    }, []);
+    return (
+        <div>
+            <p> My Other Contents </p>
+            <SunEditor ref={editorRef}/>
+        </div>
+    );
+};
+export default MyComponent;
+
+```
+
 ## Basic Settings
 
 **lang**
@@ -45,7 +73,7 @@ export default MyComponent;
 render() {
 	return <SunEditor lang="en" />
 	// Default is en
-	// lang prop can be one of the strings provided in this array ["en", "da", "de", "es", "fr", "ja", "ko", "pt_br", "ru", "zh_cn"]
+	// lang prop can be one of the strings provided in this array ["en", "da", "de", "es", "fr", "ja", "ko", "pt_br", "ru", "zh_cn", "ro", "pl", "ckb", "lv", "se", "ua"]
 	// Alternatively, an object of your language can be passed to this prop. To learn how to do it refer to the bottom of the page
 }
 ```
@@ -62,6 +90,20 @@ This is used to set the HTML form name of the editor. This means on HTML form su
 //...
 render() {
 	return <SunEditor name="my-editor" />
+}
+```
+
+**defaultValue**
+
+**_Set Editor's default value_**
+
+```javascript
+//...
+// Sets the default value of the editor.
+// This is useful if you don't want the onChange method to be called on render.
+// If you want the onChange method to be called on render please use the setContents prop
+render() {
+	return <SunEditor defaultValue="<p>The editor's default value</p>" />
 }
 ```
 
@@ -82,7 +124,7 @@ render() {
 
 **height**
 
-**_Set Editor's height**
+**_Set Editor's height_**
 
 ```javascript
 //...
@@ -146,9 +188,11 @@ render() {
 
 **setContents**
 
-**_Set Editor's Initial Content_**
+**_Set Editor's Content_**
 
-**Note** ``setContents`` is used to set the initial contents of the editor. If you are setting the contents with a state variable, make sure that you are not using the same variable to handle the ``onChange`` event.
+**Note:** To set the initial contents of the editor without calling the ``onChange`` event please use the ``defaultValue`` prop.
+``setContents`` is good in setting the contents of the editor programmatically.
+
 
 ```javascript
 //...
@@ -659,6 +703,7 @@ render() {
 ## Editor Language Object
 
 You can translate the object below to any other language and pass it to the lang prop to set your locale language if it is not part of the strings of array above.
+Note: You will be aided by your editors intellisense
 
 ```javascript
 

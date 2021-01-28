@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Lang from './types/lang'
+import Lang from './types/Lang'
 import SetOptions from './types/SetOptions';
 
 export interface SunEditorReactProps {
@@ -15,7 +15,7 @@ export interface SunEditorReactProps {
   onFocus?: (event: FocusEvent) => void;
   onBlur?: (event: FocusEvent, editorContents: string) => void;
   onLoad?: (reload: boolean) => void;
-  onDrop?: (event: DragEvent) => boolean;
+  onDrop?: (event: DragEvent, cleanData: string, maxCharCount: boolean) => boolean;
   onPaste?: (event: ClipboardEvent, cleanData: string, maxCharCount: boolean) => void;
   onImageUpload?: (
     targetImgElement: HTMLImageElement,
@@ -51,6 +51,7 @@ export interface SunEditorReactProps {
   imageUploadHandler?: (xmlHttpRequest: XMLHttpRequest, info: {isUpdate: boolean, linkValue: any, element: Element, align: any, linkNewWindow: any, [key: string]: any}, core: any) => void;
 
   setOptions?: SetOptions;
+  defaultValue?: string;
   setContents?: string;
   name?: string;
   appendContents?: string;

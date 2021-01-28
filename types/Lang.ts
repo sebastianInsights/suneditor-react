@@ -16,6 +16,8 @@ type Lang =
   | "pl"
   | "ckb"
   | "lv"
+  | "se"
+  | "ua"
   | LangObj;
 
 export default Lang;
