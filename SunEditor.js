@@ -10,16 +10,18 @@ class SunEditor extends Component {
     this.txtArea = createRef();
   }
   componentDidMount() {
-    const { lang, setOptions = {}, width = "100%", height } = this.props;
+    const { lang, setOptions = {}, width = "100%", height, defaultValue, name } = this.props;
 
     setOptions.lang = setOptions.lang || getLanguage(lang);
-    setOptions.plugins = setOptions.plugins || getPlugins(setOptions);
+    setOptions.plugins = getPlugins(setOptions);
     setOptions.width = setOptions.width || width;
     if (height) setOptions.height = height;
+    if (name && defaultValue) this.txtArea.current.value = defaultValue;
 
-    this.editor = suneditor.create(this.txtArea.current);
+    this.editor = suneditor.create(this.txtArea.current, {
+      value: defaultValue
+    });
     const {
-      name,
       insertHTML,
       setContents,
       setDefaultStyle,
@@ -88,7 +90,7 @@ class SunEditor extends Component {
     if (onAudioUploadBefore)
       this.editor.onAudioUploadBefore = (files, info, _, uploadHandler) =>
         onAudioUploadBefore(files, info, uploadHandler);
-    if (onDrop) this.editor.onDrop = (e) => onDrop(e);
+    if (onDrop) this.editor.onDrop = (e, cleanData, maxCharCount) => onDrop(e, cleanData, maxCharCount);
     if (onPaste)
       this.editor.onPaste = (e, cleanData, maxCharCount) =>
         onPaste(e, cleanData, maxCharCount);
@@ -187,6 +189,9 @@ class SunEditor extends Component {
     if (prevProps.lang !== this.props.lang) {
       this.editor.setOptions({ lang: getLanguage(this.props.lang) });
     }
+    if (prevProps.placeholder !== this.props.placeholder) {
+      this.editor.setOptions({ placeholder: this.props.placeholder });
+    }
     if (prevProps.height !== this.props.height) {
       this.editor.setOptions({ height: this.props.height });
     }
@@ -274,6 +279,7 @@ SunEditor.propTypes = {
   onVideoUploadError: PropTypes.func,
   onAudioUploadError: PropTypes.func,
   setOptions: PropTypes.object,
+  name: PropTypes.string,
   setContents: PropTypes.string,
   name: PropTypes.string,
   appendContents: PropTypes.string,
