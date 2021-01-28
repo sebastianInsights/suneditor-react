@@ -23037,7 +23037,10 @@ var SunEditor_SunEditor = /*#__PURE__*/function (_Component) {
       }
 
       if (prevProps.setContents !== this.props.setContents) {
-        !this.editor.core.hasFocus && this.editor.setContents(this.props.setContents);
+          if(!this.editor.core.hasFocus)
+              this.editor.core.focusEdge();
+
+        this.editor.setContents(this.props.setContents);
       }
 
       if (prevProps.appendContents !== this.props.appendContents) {
