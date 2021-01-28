@@ -433,7 +433,7 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
 
         _callBackUpload: function (xmlHttp, callBack, errorCallBack) {
             if (xmlHttp.readyState === 4) {
-                if (xmlHttp.status === 200) {
+                if (xmlHttp.status >= 200 && xmlHttp.status < 300) {
                     try {
                         callBack(xmlHttp);
                     } catch (e) {
@@ -698,6 +698,7 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
     return fileManager;
 }));
 
+
 /***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -779,7 +780,8 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
             lineHeight: 'Line height',
             paragraphStyle: 'Paragraph style',
             textStyle: 'Text style',
-            imageGallery: 'Image gallery'
+            imageGallery: 'Image gallery',
+            mention: 'Mention',
         },
         dialogBox: {
             linkBox: {
@@ -813,6 +815,9 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
             browser: {
                 tags: 'Tags',
                 search: 'Search',
+            },
+            mentionBox: {
+              title: 'Add Mention',
             },
             caption: 'Insert description',
             close: 'Close',
@@ -886,6 +891,7 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
 
     return lang;
 }));
+
 
 /***/ }),
 /* 5 */
@@ -9222,7 +9228,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Linjehøjde',
             paragraphStyle: 'Afsnitstil',
             textStyle: 'Tekststil',
-            imageGallery: 'Billedgalleri'
+            imageGallery: 'Billedgalleri',
+            mention: 'Nævne'
         },
         dialogBox: {
             linkBox: {
@@ -9256,6 +9263,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Tags',
                 search: 'Søg',
+            },
+            mentionBox: {
+              title: 'Tilføj omtale',
             },
             caption: 'Indsæt beskrivelse',
             close: 'Luk',
@@ -9412,7 +9422,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Zeilenhöhe',
             paragraphStyle: 'Absatzstil',
             textStyle: 'Textstil',
-            imageGallery: 'Bildergalerie'
+            imageGallery: 'Bildergalerie',
+            mention: 'Erwähnen',
         },
         dialogBox: {
             linkBox: {
@@ -9446,6 +9457,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Stichworte',
                 search: 'Suche',
+            },
+            mentionBox: {
+              title: 'Erwähnung hinzufügen',
             },
             caption: 'Beschreibung eingeben',
             close: 'Schließen',
@@ -9519,6 +9533,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 31 */
@@ -9601,7 +9616,8 @@ __webpack_require__.r(__webpack_exports__);
 			lineHeight: 'Altura de la línea',
 			paragraphStyle: 'Estilo del parrafo',
 			textStyle: 'Estilo del texto',
-            imageGallery: 'Galería de imágenes'
+      imageGallery: 'Galería de imágenes',
+      mention: 'Mencionar',
 		},
 		dialogBox: {
 			linkBox: {
@@ -9635,6 +9651,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Etiquetas',
                 search: 'Buscar',
+            },
+            mentionBox: {
+              title: 'Agregar mención',
             },
 			caption: 'Insertar descripción',
 			close: 'Cerrar',
@@ -9708,6 +9727,7 @@ __webpack_require__.r(__webpack_exports__);
 
 	return lang;
 }));
+
 
 /***/ }),
 /* 32 */
@@ -9790,7 +9810,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Hauteur de la ligne',
             paragraphStyle: 'Style de paragraphe',
             textStyle: 'Style de texte',
-            imageGallery: 'Galerie d\'images'
+            imageGallery: 'Galerie d\'images',
+            mention: 'Mention',
         },
         dialogBox: {
             linkBox: {
@@ -9824,6 +9845,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Mots clés',
                 search: 'Chercher',
+            },
+            mentionBox: {
+              title: 'Ajouter une mention',
             },
             caption: 'Insérer une description',
             close: 'Fermer',
@@ -9980,7 +10004,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: '行の高さ',
             paragraphStyle: '段落スタイル',
             textStyle: 'テキストスタイル',
-            imageGallery: 'イメージギャラリー'
+            imageGallery: 'イメージギャラリー',
+            mention: '言及する',
         },
         dialogBox: {
             linkBox: {
@@ -10014,6 +10039,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'タグ',
                 search: '探す',
+            },
+            mentionBox: {
+              title: '言及を追加',
             },
             caption: '説明付け',
             close: '閉じる',
@@ -10087,6 +10115,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 34 */
@@ -10169,7 +10198,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: '줄 높이',
             paragraphStyle: '문단 스타일',
             textStyle: '글자 스타일',
-            imageGallery: '이미지 갤러리'
+            imageGallery: '이미지 갤러리',
+            mention: '언급하다',
         },
         dialogBox: {
             linkBox: {
@@ -10203,6 +10233,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: '태그',
                 search: '검색',
+            },
+            mentionBox: {
+              title: '언급 추가',
             },
             caption: '설명 넣기',
             close: '닫기',
@@ -10276,6 +10309,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 35 */
@@ -10359,7 +10393,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Altura da linha',
             paragraphStyle: 'Estilo do parágrafo',
             textStyle: 'Estilo do texto',
-            imageGallery: 'Galeria de imagens'
+            imageGallery: 'Galeria de imagens',
+            mention: 'Menção',
         },
         dialogBox: {
             linkBox: {
@@ -10393,6 +10428,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Tag',
                 search: 'Procurar',
+            },
+            mentionBox: {
+              title: 'Adicionar menção',
             },
             caption: 'Inserir descrição',
             close: 'Fechar',
@@ -10466,6 +10504,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 36 */
@@ -10548,7 +10587,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Высота линии',
             paragraphStyle: 'Стиль абзаца',
             textStyle: 'Стиль текста',
-            imageGallery: 'Галерея'
+            imageGallery: 'Галерея',
+            mention: 'Упоминание',
         },
         dialogBox: {
             linkBox: {
@@ -10582,6 +10622,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Теги',
                 search: 'Поиск',
+            },
+            mentionBox: {
+              title: 'Добавить упоминание',
             },
             caption: 'Добавить подпись',
             close: 'Закрыть',
@@ -10655,6 +10698,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 37 */
@@ -10737,7 +10781,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Altezza linea',
             paragraphStyle: 'Stile Paragrafo',
             textStyle: 'Stile Testo',
-            imageGallery: 'Galleria di immagini'
+            imageGallery: 'Galleria di immagini',
+            mention: 'Citare',
         },
         dialogBox: {
             linkBox: {
@@ -10771,6 +10816,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'tag',
                 search: 'Ricerca',
+            },
+            mentionBox: {
+              title: 'Aggiungi menzione',
             },
             caption: 'Inserisci descrizione',
             close: 'ClChiudiose',
@@ -10927,7 +10975,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: '行高',
             paragraphStyle: '段落样式',
             textStyle: '文字样式',
-            imageGallery: '图片库'
+            imageGallery: '图片库',
+            mention: '提到',
         },
         dialogBox: {
             linkBox: {
@@ -10961,6 +11010,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: '标签',
                 search: '搜索',
+            },
+            mentionBox: {
+              title: '添加提及',
             },
             caption: '标题',
             close: '取消',
@@ -11116,7 +11168,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Înălțime linie',
             paragraphStyle: 'Stil paragraf',
             textStyle: 'Stil text',
-            imageGallery: 'Galerie de imagini'
+            imageGallery: 'Galerie de imagini',
+            mention: 'Mentiune',
         },
         dialogBox: {
             linkBox: {
@@ -11150,6 +11203,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Etichete',
                 search: 'Căutareim',
+            },
+            mentionBox: {
+              title: 'Adăugați mențiune',
             },
             caption: 'Inserează descriere',
             close: 'Închide',
@@ -11223,6 +11279,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 40 */
@@ -11305,7 +11362,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Odstęp między wierszami',
             paragraphStyle: 'Styl akapitu',
             textStyle: 'Styl tekstu',
-            imageGallery: 'Galeria obrazów'
+            imageGallery: 'Galeria obrazów',
+            mention: 'Wzmianka',
         },
         dialogBox: {
             linkBox: {
@@ -11339,6 +11397,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Tagi',
                 search: 'Szukaj',
+            },
+            mentionBox: {
+              title: 'Dodaj wzmiankę',
             },
             caption: 'Wstaw opis',
             close: 'Zamknij',
@@ -11412,6 +11473,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 41 */
@@ -11683,7 +11745,8 @@ __webpack_require__.r(__webpack_exports__);
             lineHeight: 'Līnijas augstums',
             paragraphStyle: 'Paragrāfa stils',
             textStyle: 'Teksta stils',
-            imageGallery: 'Attēlu galerija'
+            imageGallery: 'Attēlu galerija',
+            mention: 'Pieminēt',
         },
         dialogBox: {
             linkBox: {
@@ -11717,6 +11780,9 @@ __webpack_require__.r(__webpack_exports__);
             browser: {
                 tags: 'Tagi',
                 search: 'Meklēt'
+            },
+            mentionBox: {
+              title: 'Pievienot pieminēšanu',
             },
             caption: 'Ievietot aprakstu',
             close: 'Aizvērt',
@@ -11790,6 +11856,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return lang;
 }));
+
 
 /***/ }),
 /* 43 */
@@ -11998,8 +12065,10 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
    attachment: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.38 15.68"><g><path d="M15.23,6h1v9.78a3.88,3.88,0,0,1-1.31,2.45,4,4,0,0,1-6.57-2.45V7A3,3,0,0,1,9.2,4.89a3,3,0,0,1,5,2.09v8.31a1.92,1.92,0,0,1-.58,1.39,2,2,0,0,1-1.39.58,1.92,1.92,0,0,1-1.39-.58,2,2,0,0,1-.58-1.39V8h1v7.32a1,1,0,0,0,.29.69,1,1,0,0,0,.69.28A.9.9,0,0,0,13,16a1,1,0,0,0,.29-.69V7a1.92,1.92,0,0,0-.58-1.39A2,2,0,0,0,11.27,5a1.92,1.92,0,0,0-1.39.58A2,2,0,0,0,9.33,7v8.31a3,3,0,1,0,5.9,0V6Z" transform="translate(-8.08 -3.78)"/></g></svg>',
    map: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.7 15.62"><g><path d="M12.05,12.42a2.93,2.93,0,1,1,2.07-5A2.88,2.88,0,0,1,15,9.49a3,3,0,0,1-.86,2.07,2.89,2.89,0,0,1-2.07.86Zm0-5.36a2.43,2.43,0,0,0-1.72,4.16,2.48,2.48,0,0,0,1.72.72,2.44,2.44,0,0,0,0-4.88Zm0-3.3A5.84,5.84,0,0,1,17.9,9.62a9.94,9.94,0,0,1-1.73,5A33.59,33.59,0,0,1,12.84,19a1.52,1.52,0,0,1-.23.2,1,1,0,0,1-.55.2h0a1,1,0,0,1-.55-.2,1.52,1.52,0,0,1-.23-.2,33.59,33.59,0,0,1-3.33-4.32,9.93,9.93,0,0,1-1.72-5,5.84,5.84,0,0,1,5.85-5.86ZM12,18.34l.08.05.06-.06a35.58,35.58,0,0,0,3.06-3.93,9.35,9.35,0,0,0,1.74-4.77,4.88,4.88,0,0,0-4.88-4.88A4.79,4.79,0,0,0,8.6,6.17,4.84,4.84,0,0,0,7.17,9.62,9.29,9.29,0,0,0,8.91,14.4,36,36,0,0,0,12,18.34Z" transform="translate(-6.2 -3.76)"/></g></svg>',
    magic_stick: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.73 15.75"><g><path d="M19.86,19.21a1,1,0,0,0,.28-.68,1,1,0,0,0-.28-.7L13,10.93a1,1,0,0,0-.7-.28,1,1,0,0,0-.68,1.65l6.9,6.9a1,1,0,0,0,.69.29.93.93,0,0,0,.69-.28ZM9.19,8.55a3,3,0,0,0,1.68,0,14.12,14.12,0,0,0,1.41-.32A11.26,11.26,0,0,0,10.8,7.06c-.56-.36-.86-.56-.91-.58S10,5.91,10,5.11s0-1.26-.15-1.37a4.35,4.35,0,0,0-1.19.71c-.53.4-.81.62-.87.68a9,9,0,0,0-2-.6,6.84,6.84,0,0,0-.76-.09s0,.27.08.77a8.6,8.6,0,0,0,.61,2q-.09.09-.69.87a3.59,3.59,0,0,0-.68,1.17c.12.17.57.23,1.36.15S7,9.26,7.15,9.23s.21.36.57.91a10.49,10.49,0,0,0,1.14,1.48c0-.1.14-.57.31-1.4a3,3,0,0,0,0-1.67Z" transform="translate(-4.41 -3.74)"/></g></svg>',
-   empty_file: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.78 15.75"><g><path d="M14.73,3.76,18.67,7.7v9.84a2,2,0,0,1-2,2H7.84a1.89,1.89,0,0,1-1.38-.58,2,2,0,0,1-.57-1.39V5.73a1.93,1.93,0,0,1,.57-1.38,2,2,0,0,1,1.38-.58h6.62l.26,0v0Zm2.95,4.92h-2a1.93,1.93,0,0,1-1.38-.57,2,2,0,0,1-.58-1.4V6.17c0-.36,0-.84,0-1.43H7.85a1,1,0,0,0-.7.29,1,1,0,0,0-.29.7V17.54a1,1,0,0,0,.29.69,1,1,0,0,0,.69.29h8.85a1,1,0,0,0,.71-.29.92.92,0,0,0,.28-.69Zm0-1L14.73,4.74v2A1,1,0,0,0,15,7.4a1,1,0,0,0,.69.29Z" transform="translate(-5.89 -3.76)"/></g></svg>'
+   empty_file: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.78 15.75"><g><path d="M14.73,3.76,18.67,7.7v9.84a2,2,0,0,1-2,2H7.84a1.89,1.89,0,0,1-1.38-.58,2,2,0,0,1-.57-1.39V5.73a1.93,1.93,0,0,1,.57-1.38,2,2,0,0,1,1.38-.58h6.62l.26,0v0Zm2.95,4.92h-2a1.93,1.93,0,0,1-1.38-.57,2,2,0,0,1-.58-1.4V6.17c0-.36,0-.84,0-1.43H7.85a1,1,0,0,0-.7.29,1,1,0,0,0-.29.7V17.54a1,1,0,0,0,.29.69,1,1,0,0,0,.69.29h8.85a1,1,0,0,0,.71-.29.92.92,0,0,0,.28-.69Zm0-1L14.73,4.74v2A1,1,0,0,0,15,7.4a1,1,0,0,0,.69.29Z" transform="translate(-5.89 -3.76)"/></g></svg>',
+  mention:  '<svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill-opacity=".9" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path></svg>'
 });
+
 // EXTERNAL MODULE: ./node_modules/suneditor/src/lang/en.js
 var en = __webpack_require__(4);
 var en_default = /*#__PURE__*/__webpack_require__.n(en);
@@ -14400,7 +14469,9 @@ const util_util = {
             audio: ['', lang.toolbar.audio, 'audio', 'dialog', icons.audio],
             math: ['', lang.toolbar.math, 'math', 'dialog', icons.math],
             /** plugins - fileBrowser */
-            imageGallery: ['', lang.toolbar.imageGallery, 'imageGallery', 'fileBrowser', icons.image_gallery]
+            imageGallery: ['', lang.toolbar.imageGallery, 'imageGallery', 'fileBrowser', icons.image_gallery],
+            /** plugins - mention */
+            mention: ['', lang.toolbar.mention, 'mention', 'dialog', icons.mention]
         };
     },
 
@@ -14634,6 +14705,7 @@ const util_util = {
         };
     }
 });
+
 // CONCATENATED MODULE: ./node_modules/suneditor/src/lib/context.js
 /*
  * wysiwyg web editor
