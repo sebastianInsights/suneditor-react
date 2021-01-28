@@ -280,7 +280,6 @@ SunEditor.propTypes = {
   onVideoUploadError: PropTypes.func,
   onAudioUploadError: PropTypes.func,
   setOptions: PropTypes.object,
-  name: PropTypes.string,
   setContents: PropTypes.string,
   name: PropTypes.string,
   appendContents: PropTypes.string,
